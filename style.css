@@ -1,0 +1,286 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+   ========================================== */
+body {
+    background-color: rgb(22, 22, 22);
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ==========================================
+   CABECERA / HEADER
+   ========================================== */
+header {
+    display: flex;
+    justify-content: space-between; /* Separa el logo del menú */
+    height: 70px; 
+    background-color: rgb(12, 12, 12);
+    border-bottom: 2px solid #d628cd;
+    align-items: center; 
+    padding: 0 20px; /* Separación de los bordes izquierdo y derecho */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.logo h1 {
+    margin: 0;
+    padding-top: 5px;
+}
+
+.logo img {
+    height: 55px; /* Ajustado para que entre perfecto en los 70px del header */
+    width: auto;
+    margin-right: 15px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+
+/* Títulos de secciones */
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ==========================================
+   CUENTA REGRESIVA
+   ========================================== */
+.contenedor {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#regresiva {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilo de cada tarjeta blanca */
+.tiempo {
+    background: white;
+    padding: 20px 15px; /* Balanceado */
+    border-radius: 10px;
+    width: 65px; /* Espacio cómodo para los números */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Los números grandes */
+.tiempo span {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1;
+}
+
+/* Los textos (Días, Horas, etc) */
+.tiempo p {
+    margin: 8px 0 0 0;
+    font-size: 12px;
+    color: #000000;
+    font-weight: 500;
+}
+
+/* Los dos puntos separadores */
+.separador {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    align-self: center;
+    padding-bottom: 25px; /* Centrado visual */
+}
+
+/* ==========================================
+   SECCIÓN DE TARJETAS DE PARTIDOS (BACKEND .NET)
+   ========================================== */
+
+/* Contenedor principal: Grilla responsiva */
+#contenedor-partidos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Tarjeta individual */
+.tarjeta-partido {
+    background-color: #121212;
+    border: 1px solid #242424;
+    border-left: 3px solid #d628cd; /* Borde verde lateral como en la foto */
+    border-radius: 6px;
+    width: 200%;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.tarjeta-partido:hover {
+    background-color: #181818;
+}
+
+
+
+/* Info de la Liga y minutos */
+.tarjeta-partido .liga {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 8px;
+}
+
+/* Fila del marcador */
+.marcador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Estructura para cada equipo (Escudo + Nombre) */
+.equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 42%;
+    text-align: center;
+}
+
+.equipo img {
+    margin-bottom: 8px;
+    height: 40px; /* Forzamos tamaño amigable para los escudos */
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+}
+
+.equipo span {
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    word-wrap: break-word; /* Si el nombre es largo, baja de renglón sin romperse */
+}
+
+/* Marcador de goles central */
+.goles {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d628cd; /* Verde neón deportivo */
+    background-color: #121212;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+    min-width: 55px;
+    text-align: center;
+}
+/*
+   LAYOUT
+   
+
+/* El contenedor que alinea Izquierda - Centro - Derecha */
+.layout-principal{
+    display: grid;
+    grid-template-columns: 280px 1fr; /* 280px para el sidebar, el resto para el contenido */
+  min-height: 100vh;
+}
+
+.panel-lateral {
+background-color: #121212;
+  border-right: 1px solid #222;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.contenido-derecho {
+  display: flex;
+  flex-direction: column;
+  background-color: #0d0d0d;
+}
+
+
+
+
+/* Botones interactivos del panel derecho */
+.btn-filtro {
+display: flex;
+width: 200%;
+padding-top: 15px;
+}
+
+.btn-filtro:hover {
+    border-color: #4f46e5;
+    background-color: #1a164d;
+}
+
+/* Botón de la liga seleccionada actualmente */
+.btn-filtro.activo {
+    border-color: #4f46e5;
+    background-color: #4f46e5;
+    font-weight: bold;
+}
+.barra-fechas {
+    display: flex;
+    justify-content: center; /* Lo alinea a la derecha, arriba de las tarjetas */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#selector-fecha {
+    background-color: #141414;
+    color: #ffffff;
+    border: 1px solid #d946ef; /* Borde fucsia/violeta como tus tarjetas */
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+#selector-fecha:hover {
+    border-color: #f0abfc;
+}
+
+
+/* RESPONSIVO: Si la pantalla es chica (celular), mandamos los paneles abajo */
+@media (max-width: 1000px) {
+    .layout-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+    .panel-lateral {
+        width: 340px; /* Mismo ancho que tus tarjetas de partidos */
+    }
+}
+

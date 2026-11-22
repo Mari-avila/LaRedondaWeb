@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>LaRedonda</title>
+</head>
+<body>
+    <header> 
+        <a href="#" class="logo">
+            <img src="mundial_2026.png" alt="logoMundial">
+            <h1 class="Mundial-2026"> LaRedonda.live</h1>
+        </a>
+    </header>
+
+    <div class="layout-principal">
+        <aside class="panel-lateral">
+            <h3>Ligas y Torneos</h3>
+            <hr>
+            <button class="btn-filtro" data-liga="Champions League"> Champions League</button>
+            <button class="btn-filtro" data-liga="Premier League"> Premier League</button>
+            <button class="btn-filtro" data-liga="La Liga"> LaLiga</button>
+            <button class="btn-filtro" data-liga="Bundesliga">Bundesliga</button>
+            <button class="btn-filtro" data-liga="Ligue One">Ligue One</button>
+            <button class="btn-filtro" data-liga="Serie A">Serie A</button>
+        </aside>
+
+        <!-- Metemos la barra de fechas ADENTRO de contenido-derecho, arriba del main -->
+        <div class="contenido-derecho">
+            <div class="barra-fechas">
+                <select id="selector-fecha"></select>
+            </div>
+
+            <!-- Dejamos SOLO este contenedor-partidos -->
+            <main id="contenedor-partidos"></main>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
