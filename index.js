@@ -1,4 +1,4 @@
-const URL_MI_SERVER = 'http://localhost:5252/api/partidos';
+const URL_MI_SERVER = 'https://larendondaapi-1.onrender.com/api/partidos';
 const contenedor = document.getElementById('contenedor-partidos');
 const selectorFecha = document.getElementById('selector-fecha');
 
